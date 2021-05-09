@@ -1,0 +1,72 @@
+.parent {
+  overflow: scroll;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 1.3fr;
+  grid-template-rows: 150px 150px 150px 150px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 3 / 2;
+  background-color: #1abc9c
+}
+.div2 {
+  grid-area: 1 / 2 / 3 / 3;
+  background-color: #2ecc71
+}
+.div3 {
+  grid-area: 3 / 1 / 5 / 2;
+  background-color: #16a085
+}
+.div4 {
+  grid-area: 3 / 2 / 5 / 3; 
+  background-color: #27ae60
+}
+.div5 {
+  grid-area: 1 / 3 / 5 / 4;
+  background-color: #3498db
+}
+
+
+.custom {
+  grid-gap: 0;
+  --cols-lg: 3;
+  --cols-xl: 3;
+}
+
+
+/* バナー本体 */
+.news-banner {
+  display: block;
+  width: 100%;
+  background-color: #3498db;
+  overflow: hidden;
+}
+
+/* バナー内コンテンツ */
+.news-banner__content {
+  display: inline-block;
+  color: #fff;
+  line-height: 1px;
+  padding-left: 100%;
+  white-space: nowrap;
+  animation: animate-banner 8s linear infinite;
+}
+
+/* バナー内の要素をすべて選択 */
+.news-banner__content > * {
+  display: inline-block;
+}
+
+/* 横にスクロールさせるアニメーション */
+@keyframes animate-banner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
