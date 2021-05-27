@@ -1,0 +1,131 @@
+/*.parent {
+  overflow: scroll;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 1.3fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+*/
+
+.parent{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 12px;
+  height: 490px;
+}
+
+/* グリッドアイテム */
+.child1{
+  word-break: break-word;
+  margin: 10px 0px 0px;
+  background-color: green;
+  grid-row: 1/2;
+  grid-column: 1/3;
+}
+.child2{
+  word-break: break-word;
+  background-color: red;
+  grid-row: 3/4;
+  grid-column: 1/2;
+}
+.child3{
+  word-break: break-word;
+  background-color: pink;
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+.child4{
+  word-break: break-word;
+  margin: 10px 0px 0px;
+  background-color: orange;
+  grid-row: 1/2;
+  grid-column: 3/5;
+}
+
+.child6{
+  word-break: break-word;
+  background-color: gray;
+  grid-row: 2/4;
+  grid-column: 3/5;
+}
+
+.child7 {
+  word-break: break-word;
+  background-color: blue;
+  grid-row: 2/3;
+  grid-colum: 2/3;
+}
+
+.child8 {word-break: break-word;
+  background-color: black;
+  grid-row: 2/3;
+  grid-colum: 2/3;
+}
+
+/*
+
+.div1 {
+  grid-area: 1 / 1 / 3 / 2;
+  background-color: #1abc9c
+}
+.div2 {
+  grid-area: 1 / 2 / 3 / 3;
+  background-color: #2ecc71
+}
+.div3 {
+  grid-area: 3 / 1 / 5 / 2;
+  background-color: #16a085
+}
+.div4 {
+  grid-area: 3 / 2 / 5 / 3; 
+  background-color: #27ae60
+}
+.div5 {
+  grid-area: 1 / 3 / 5 / 4;
+  background-color: #3498db
+}
+*/
+
+.custom {
+  grid-gap: 0;
+  --cols-lg: 3;
+  --cols-xl: 3;
+}
+
+
+/* バナー本体 */
+.news-banner {
+  display: block;
+  width: 100%;
+  background-color: #3498db;
+  overflow: hidden;
+}
+
+/* バナー内コンテンツ */
+.news-banner__content {
+  display: inline-block;
+  color: #fff;
+  line-height: 1px;
+  padding-left: 100%;
+  white-space: nowrap;
+  animation: animate-banner 8s linear infinite;
+}
+
+/* バナー内の要素をすべて選択 */
+.news-banner__content > * {
+  display: inline-block;
+}
+
+/* 横にスクロールさせるアニメーション */
+@keyframes animate-banner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
